@@ -2,28 +2,28 @@
 
 RequireAdmin
 
-DisableTelemetry
+# DisableTelemetry
 DisableWiFiSense
-# DisableSmartScreen
+DisableSmartScreen
 DisableWebSearch
 DisableAppSuggestions
-DisableActivityHistory
-DisableBackgroundApps
-DisableLocationTracking
-DisableMapUpdates
-DisableFeedback
-DisableTailoredExperiences
-DisableAdvertisingID
-DisableWebLangList
-DisableCortana
-DisableErrorReporting
+# DisableActivityHistory
+# DisableBackgroundApps
+# DisableLocationTracking
+# DisableMapUpdates
+# DisableFeedback
+# DisableTailoredExperiences
+# DisableAdvertisingID
+# DisableWebLangList
+# DisableCortana
+# DisableErrorReporting
 # SetP2PUpdateLocal
 DisableDiagTrack
-DisableWAPPush
+# DisableWAPPush
 
-# SetUACLow
+SetUACLow
 # EnableSharingMappedDrives
-DisableAdminShares
+# DisableAdminShares
 # DisableSMB1
 # DisableSMBServer
 # DisableLLMNR
@@ -32,76 +32,76 @@ SetCurrentNetworkPrivate
 # DisableNetDevicesAutoInst
 # EnableCtrldFolderAccess
 # DisableFirewall
-# DisableDefender
+DisableDefender
 # DisableDefenderCloud
-EnableF8BootMenu
+# EnableF8BootMenu
 SetDEPOptOut
 # EnableCIMemoryIntegrity
-DisableScriptHost
+# DisableScriptHost
 EnableDotNetStrongCrypto
 # EnableMeltdownCompatFlag
 
 # DisableUpdateMSRT
-# DisableUpdateDriver
+DisableUpdateDriver
 DisableUpdateRestart
 # DisableHomeGroups
-DisableSharedExperiences
+# DisableSharedExperiences
 DisableRemoteAssistance
-EnableRemoteDesktop
+# EnableRemoteDesktop
 DisableAutoplay
 DisableAutorun
-# EnableStorageSense
+EnableStorageSense
 # DisableDefragmentation
 # DisableSuperfetch
 # DisableIndexing
-# SetBIOSTimeUTC
+SetBIOSTimeUTC
 # EnableHibernation
 # DisableSleepButton
 # DisableSleepTimeout
 # DisableFastStartup
 
-DisableActionCenter
-HideAccountProtectionWarn
-DisableLockScreen
+# DisableActionCenter
+# HideAccountProtectionWarn
+# DisableLockScreen
 # DisableLockScreenRS1
-HideNetworkFromLockScreen
-HideShutdownFromLockScreen
+# HideNetworkFromLockScreen
+# HideShutdownFromLockScreen
 DisableStickyKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
-# EnableFileDeleteConfirm
+EnableFileDeleteConfirm
 HideTaskbarSearch
 HideTaskView
 ShowSmallTaskbarIcons
-SetTaskbarCombineWhenFull
+SetTaskbarCombineNever
 HideTaskbarPeopleIcon
-ShowTrayIcons
-DisableSearchAppInStore
-DisableNewAppPrompt
-# SetControlPanelSmallIcons
-SetVisualFXPerformance
+# ShowTrayIcons
+# DisableSearchAppInStore
+# DisableNewAppPrompt
+SetControlPanelSmallIcons
+# SetVisualFXPerformance
 # AddENKeyboard
 # EnableNumlock
 
-ShowKnownExtensions
-ShowHiddenFiles
-HideSelectCheckboxes
-HideSyncNotifications
+# ShowKnownExtensions
+# ShowHiddenFiles
+# HideSelectCheckboxes
+# HideSyncNotifications
 HideRecentShortcuts
 SetExplorerThisPC
 ShowThisPCOnDesktop
 # ShowUserFolderOnDesktop
-HideDesktopFromThisPC
+# HideDesktopFromThisPC
 # HideDesktopFromExplorer
-HideDocumentsFromThisPC
+# HideDocumentsFromThisPC
 # HideDocumentsFromExplorer
-HideDownloadsFromThisPC
+# HideDownloadsFromThisPC
 # HideDownloadsFromExplorer
-HideMusicFromThisPC
+# HideMusicFromThisPC
 # HideMusicFromExplorer
-HidePicturesFromThisPC
+# HidePicturesFromThisPC
 # HidePicturesFromExplorer
-HideVideosFromThisPC
+# HideVideosFromThisPC
 # HideVideosFromExplorer
 Hide3DObjectsFromThisPC
 # Hide3DObjectsFromExplorer
@@ -109,25 +109,25 @@ Hide3DObjectsFromThisPC
 DisableThumbnailCache
 DisableThumbsDBOnNetwork
 
-DisableOneDrive
-UninstallOneDrive
+# DisableOneDrive
+# UninstallOneDrive
 UninstallMsftBloat
-UninstallThirdPartyBloat
+# UninstallThirdPartyBloat
 # UninstallWindowsStore
-DisableXboxFeatures
-DisableAdobeFlash
+# DisableXboxFeatures
+# DisableAdobeFlash
 DisableEdgeShortcutCreation
 # UninstallMediaPlayer
 # UninstallInternetExplorer
-# UninstallWorkFolders
+UninstallWorkFolders
 # InstallLinuxSubsystem
 # InstallHyperV
-SetPhotoViewerAssociation
+# SetPhotoViewerAssociation
 AddPhotoViewerOpenWith
 # UninstallPDFPrinter
 UninstallXPSPrinter
-RemoveFaxPrinter
-# UninstallFaxAndScan
+# RemoveFaxPrinter
+UninstallFaxAndScan
 
 # HideServerManagerOnLogin
 # DisableShutdownTracker
@@ -137,7 +137,7 @@ RemoveFaxPrinter
 # EnableAudio
 
 # UnpinStartMenuTiles
-# UnpinTaskbarIcons
+UnpinTaskbarIcons
 
 WaitForKey
-Restart
+# Restart

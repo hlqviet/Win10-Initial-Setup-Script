@@ -12,7 +12,7 @@ DisableAppSuggestions
 # DisableLocationTracking
 # DisableMapUpdates
 # DisableFeedback
-# DisableTailoredExperiences
+DisableTailoredExperiences
 # DisableAdvertisingID
 # DisableWebLangList
 # DisableCortana

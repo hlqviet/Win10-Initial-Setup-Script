@@ -3,7 +3,6 @@
 RequireAdmin
 
 # DisableTelemetry
-DisableWiFiSense
 DisableSmartScreen
 DisableWebSearch
 DisableAppSuggestions
@@ -17,13 +16,13 @@ DisableTailoredExperiences
 # DisableWebLangList
 # DisableCortana
 # DisableErrorReporting
-# SetP2PUpdateLocal
+SetP2PUpdateInternet
 DisableDiagTrack
 # DisableWAPPush
 
 SetUACLow
 # EnableSharingMappedDrives
-# DisableAdminShares
+DisableAdminShares
 # DisableSMB1
 # DisableSMBServer
 # DisableLLMNR
@@ -48,7 +47,7 @@ DisableUpdateRestart
 # DisableHomeGroups
 # DisableSharedExperiences
 DisableRemoteAssistance
-# EnableRemoteDesktop
+EnableRemoteDesktop
 DisableAutoplay
 DisableAutorun
 EnableStorageSense
@@ -82,7 +81,7 @@ HideTaskbarPeopleIcon
 SetControlPanelSmallIcons
 # SetVisualFXPerformance
 # AddENKeyboard
-# EnableNumlock
+EnableNumlock
 # SetSoundSchemeNone
 # DisableStartupSound
 # DisableChangingSoundScheme
@@ -117,7 +116,7 @@ DisableThumbsDBOnNetwork
 # DisableOneDrive
 # UninstallOneDrive
 UninstallMsftBloat
-# UninstallThirdPartyBloat
+UninstallThirdPartyBloat
 # UninstallWindowsStore
 # DisableXboxFeatures
 # DisableAdobeFlash

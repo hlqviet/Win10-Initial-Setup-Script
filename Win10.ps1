@@ -986,11 +986,12 @@ Function EnableRemoteAssistance {
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Remote Assistance" -Name "fAllowToGetHelp" -Type DWord -Value 1
 }
 
-# Enable Remote Desktop w/o Network Level Authentication
+# Enable Remote Desktop with Network Level Authentication
 Function EnableRemoteDesktop {
-	Write-Output "Enabling Remote Desktop w/o Network Level Authentication..."
+	Write-Output "Enabling Remote Desktop with Network Level Authentication..."
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Type DWord -Value 0
-	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Type DWord -Value 0
+	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Type DWord -Value 1
+	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "SecurityLayer" -Type DWord -Value 2
 	Enable-NetFirewallRule -Name "RemoteDesktop*"
 }
 
@@ -998,7 +999,6 @@ Function EnableRemoteDesktop {
 Function DisableRemoteDesktop {
 	Write-Output "Disabling Remote Desktop..."
 	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server" -Name "fDenyTSConnections" -Type DWord -Value 1
-	Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp" -Name "UserAuthentication" -Type DWord -Value 1
 	Disable-NetFirewallRule -Name "RemoteDesktop*"
 }
 

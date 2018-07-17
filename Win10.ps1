@@ -2110,7 +2110,7 @@ Function UninstallMsftBloat {
 	# Get-AppxPackage "microsoft.windowscommunicationsapps" | Remove-AppxPackage
 	# Get-AppxPackage "Microsoft.WindowsFeedbackHub" | Remove-AppxPackage
 	# Get-AppxPackage "Microsoft.WindowsMaps" | Remove-AppxPackage
-	Get-AppxPackage "Microsoft.WindowsPhone" | Remove-AppxPackage
+	# Get-AppxPackage "Microsoft.WindowsPhone" | Remove-AppxPackage
 	# Get-AppxPackage "Microsoft.Windows.Photos" | Remove-AppxPackage
 	# Get-AppxPackage "Microsoft.WindowsSoundRecorder" | Remove-AppxPackage
 	# Get-AppxPackage "Microsoft.ZuneMusic" | Remove-AppxPackage

@@ -3,6 +3,7 @@
 RequireAdmin
 
 # DisableTelemetry
+# DisableWiFiSense
 DisableSmartScreen
 DisableWebSearch
 DisableAppSuggestions
@@ -107,7 +108,7 @@ ShowThisPCOnDesktop
 # HidePicturesFromExplorer
 # HideVideosFromThisPC
 # HideVideosFromExplorer
-Hide3DObjectsFromThisPC
+# Hide3DObjectsFromThisPC
 # Hide3DObjectsFromExplorer
 # DisableThumbnails
 DisableThumbnailCache

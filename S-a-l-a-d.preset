@@ -17,6 +17,7 @@ DisableAppSuggestions
 DisableTailoredExperiences
 SetP2PUpdateInternet
 DisableDiagTrack
+EnableCortanaRequisites
 
 ### Security Tweaks ###
 SetUACLow

@@ -1,0 +1,84 @@
+##########
+# Win10 / WinServer2016 Initial Setup Script - Default preset
+# Author: Disassembler <disassembler@dasm.cz>
+# Version: v3.0, 2018-09-15
+# Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
+##########
+
+### Require administrator privileges ###
+RequireAdmin
+
+### Privacy Tweaks ###
+# DisableTelemetry
+DisableWiFiSense
+DisableSmartScreen
+DisableWebSearch
+DisableAppSuggestions
+DisableTailoredExperiences
+SetP2PUpdateInternet
+DisableDiagTrack
+
+### Security Tweaks ###
+SetUACLow
+DisableAdminShares
+SetCurrentNetworkPrivate
+DisableDefender
+SetDEPOptOut
+EnableDotNetStrongCrypto
+
+### Service Tweaks ###
+DisableUpdateDriver
+DisableUpdateRestart
+DisableHomeGroups
+DisableRemoteAssistance
+EnableRemoteDesktop
+EnableRemoteDesktopNLA
+DisableAutoplay
+DisableAutorun
+EnableStorageSense
+SetBIOSTimeUTC
+
+### UI Tweaks ###
+HideAccountProtectionWarn
+DisableStickyKeys
+ShowTaskManagerDetails
+ShowFileOperationsDetails
+EnableFileDeleteConfirm
+HideTaskbarSearch
+HideTaskView
+ShowSmallTaskbarIcons
+SetTaskbarCombineNever
+HideTaskbarPeopleIcon
+HideRecentlyAddedApps
+SetControlPanelSmallIcons
+
+### Explorer UI Tweaks ###
+HideRecentShortcuts
+SetExplorerThisPC
+HideQuickAccess
+ShowThisPCOnDesktop
+DisableThumbnailCache
+DisableThumbsDBOnNetwork
+
+### Application Tweaks ###
+UninstallMsftBloat
+UninstallThirdPartyBloat
+DisableEdgeShortcutCreation
+UninstallWorkFolders
+AddPhotoViewerOpenWith
+UninstallXPSPrinter
+UninstallFaxAndScan
+
+### Server Specific Tweaks ###
+# HideServerManagerOnLogin   # ShowServerManagerOnLogin
+# DisableShutdownTracker     # EnableShutdownTracker
+# DisablePasswordPolicy      # EnablePasswordPolicy
+# DisableCtrlAltDelLogin     # EnableCtrlAltDelLogin
+# DisableIEEnhancedSecurity  # EnableIEEnhancedSecurity
+# EnableAudio                # DisableAudio
+
+### Unpinning ###
+UnpinTaskbarIcons
+
+### Auxiliary Functions ###
+WaitForKey

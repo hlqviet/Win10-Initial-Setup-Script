@@ -1,15 +1,7 @@
-##########
-# Win10 / WinServer2016 Initial Setup Script - Default preset
-# Author: Disassembler <disassembler@dasm.cz>
-# Version: v3.0, 2018-09-15
-# Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
-##########
-
 ### Require administrator privileges ###
 RequireAdmin
 
 ### Privacy Tweaks ###
-# DisableTelemetry
 DisableWiFiSense
 DisableSmartScreen
 DisableWebSearch

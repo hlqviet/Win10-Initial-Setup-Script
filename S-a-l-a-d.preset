@@ -58,6 +58,7 @@ UninstallMsftBloat
 UninstallThirdPartyBloat
 DisableEdgeShortcutCreation
 UninstallWorkFolders
+InstallNET23
 AddPhotoViewerOpenWith
 UninstallXPSPrinter
 UninstallFaxAndScan

@@ -16,6 +16,9 @@ SetUACLow
 DisableAdminShares
 SetCurrentNetworkPrivate
 DisableDefender
+HideDefenderTrayIcon
+HideAccountProtectionWarn
+DisableDownloadBlocking
 SetDEPOptOut
 EnableDotNetStrongCrypto
 
@@ -32,7 +35,6 @@ EnableStorageSense
 SetBIOSTimeUTC
 
 ### UI Tweaks ###
-HideAccountProtectionWarn
 DisableStickyKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
@@ -44,6 +46,7 @@ SetTaskbarCombineNever
 HideTaskbarPeopleIcon
 HideRecentlyAddedApps
 SetControlPanelSmallIcons
+DisableShortcutInName
 
 ### Explorer UI Tweaks ###
 HideRecentShortcuts

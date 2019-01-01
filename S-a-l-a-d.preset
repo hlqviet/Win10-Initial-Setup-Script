@@ -47,6 +47,7 @@ HideTaskbarPeopleIcon
 HideRecentlyAddedApps
 SetControlPanelSmallIcons
 DisableShortcutInName
+EnableTitleBarColor
 
 ### Explorer UI Tweaks ###
 HideRecentShortcuts
@@ -59,7 +60,9 @@ DisableThumbsDBOnNetwork
 ### Application Tweaks ###
 UninstallMsftBloat
 UninstallThirdPartyBloat
+DisableEdgePreload
 DisableEdgeShortcutCreation
+DisableIEFirstRun
 UninstallWorkFolders
 InstallNET23
 AddPhotoViewerOpenWith

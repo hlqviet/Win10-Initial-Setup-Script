@@ -48,6 +48,7 @@ HideRecentlyAddedApps
 SetControlPanelSmallIcons
 DisableShortcutInName
 EnableTitleBarColor
+DisableEnhPointerPrecision
 
 ### Explorer UI Tweaks ###
 HideRecentShortcuts

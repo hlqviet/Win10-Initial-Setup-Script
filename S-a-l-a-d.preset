@@ -24,18 +24,18 @@ EnableDotNetStrongCrypto
 
 ### Service Tweaks ###
 DisableUpdateDriver
-DisableUpdateRestart
 DisableHomeGroups
 DisableRemoteAssistance
 EnableRemoteDesktop
 EnableRemoteDesktopNLA
 DisableAutoplay
 DisableAutorun
+EnableNTFSLongPaths
 EnableStorageSense
 SetBIOSTimeUTC
 
 ### UI Tweaks ###
-DisableStickyKeys
+DisableAccessibilityKeys
 ShowTaskManagerDetails
 ShowFileOperationsDetails
 EnableFileDeleteConfirm
@@ -51,6 +51,7 @@ EnableTitleBarColor
 DisableEnhPointerPrecision
 
 ### Explorer UI Tweaks ###
+ShowSuperHiddenFiles
 HideRecentShortcuts
 SetExplorerThisPC
 HideQuickAccess

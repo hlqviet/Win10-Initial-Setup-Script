@@ -14,7 +14,6 @@ EnableCortanaRequisites
 ### Security Tweaks ###
 SetUACLow
 DisableAdminShares
-SetCurrentNetworkPrivate
 DisableDefender
 HideDefenderTrayIcon
 HideAccountProtectionWarn
@@ -22,14 +21,19 @@ DisableDownloadBlocking
 SetDEPOptOut
 EnableDotNetStrongCrypto
 
-### Service Tweaks ###
-DisableUpdateDriver
+### Network Tweaks ###
+SetCurrentNetworkPrivate
 DisableHomeGroups
 DisableRemoteAssistance
 EnableRemoteDesktop
 EnableRemoteDesktopNLA
+
+### Service Tweaks ###
+DisableUpdateDriver
+EnableUpdateMSProducts
 DisableAutoplay
 DisableAutorun
+DisableRecycleBin
 EnableNTFSLongPaths
 EnableStorageSense
 SetBIOSTimeUTC

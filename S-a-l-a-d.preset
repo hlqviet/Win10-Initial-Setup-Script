@@ -1,0 +1,90 @@
+### Require administrator privileges ###
+RequireAdmin
+
+### Privacy Tweaks ###
+DisableWiFiSense
+DisableSmartScreen
+DisableWebSearch
+DisableAppSuggestions
+DisableTailoredExperiences
+SetP2PUpdateInternet
+DisableDiagTrack
+EnableCortanaRequisites
+
+### Security Tweaks ###
+SetUACLow
+DisableAdminShares
+DisableDefender
+HideDefenderTrayIcon
+HideAccountProtectionWarn
+DisableDownloadBlocking
+SetDEPOptOut
+EnableDotNetStrongCrypto
+
+### Network Tweaks ###
+SetCurrentNetworkPrivate
+DisableHomeGroups
+DisableRemoteAssistance
+EnableRemoteDesktop
+EnableRemoteDesktopNLA
+
+### Service Tweaks ###
+DisableUpdateDriver
+EnableUpdateMSProducts
+DisableAutoplay
+DisableAutorun
+DisableRecycleBin
+EnableNTFSLongPaths
+EnableStorageSense
+SetBIOSTimeUTC
+
+### UI Tweaks ###
+DisableAccessibilityKeys
+ShowTaskManagerDetails
+ShowFileOperationsDetails
+EnableFileDeleteConfirm
+HideTaskbarSearch
+HideTaskView
+ShowSmallTaskbarIcons
+SetTaskbarCombineNever
+HideTaskbarPeopleIcon
+HideRecentlyAddedApps
+SetControlPanelSmallIcons
+DisableShortcutInName
+EnableTitleBarColor
+DisableEnhPointerPrecision
+
+### Explorer UI Tweaks ###
+ShowSuperHiddenFiles
+HideRecentShortcuts
+SetExplorerThisPC
+HideQuickAccess
+ShowThisPCOnDesktop
+DisableThumbnailCache
+DisableThumbsDBOnNetwork
+
+### Application Tweaks ###
+UninstallMsftBloat
+UninstallThirdPartyBloat
+DisableEdgePreload
+DisableEdgeShortcutCreation
+DisableIEFirstRun
+UninstallWorkFolders
+InstallNET23
+AddPhotoViewerOpenWith
+UninstallXPSPrinter
+UninstallFaxAndScan
+
+### Server Specific Tweaks ###
+# HideServerManagerOnLogin   # ShowServerManagerOnLogin
+# DisableShutdownTracker     # EnableShutdownTracker
+# DisablePasswordPolicy      # EnablePasswordPolicy
+# DisableCtrlAltDelLogin     # EnableCtrlAltDelLogin
+# DisableIEEnhancedSecurity  # EnableIEEnhancedSecurity
+# EnableAudio                # DisableAudio
+
+### Unpinning ###
+UnpinTaskbarIcons
+
+### Auxiliary Functions ###
+WaitForKey

@@ -1,7 +1,7 @@
 ##########
-# Win10 / WinServer2016 Initial Setup Script
+# Win 10 / Server 2016 / Server 2019 Initial Setup Script - Main execution loop
 # Author: Disassembler <disassembler@dasm.cz>
-# Version: v2.21, 2018-08-27
+# Version: v3.10, 2020-07-15
 # Source: https://github.com/Disassembler0/Win10-Initial-Setup-Script
 ##########
 
@@ -2633,44 +2633,52 @@ Function UnpinTaskbarIcons {
 # Relaunch the script with administrator privileges
 Function RequireAdmin {
 	If (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]"Administrator")) {
-		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -WorkingDirectory $pwd -Verb RunAs
+		Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`" $PSCommandArgs" -Verb RunAs
 		Exit
 	}
 }
 
-# Wait for key press
-Function WaitForKey {
-	Write-Output "`nPress any key to continue..."
-	[Console]::ReadKey($true) | Out-Null
-}
+$tweaks = @()
+$PSCommandArgs = @()
 
-# Restart computer
-Function Restart {
-	Write-Output "Restarting..."
-	Restart-Computer
-}
-
-
-
-##########
-# Parse parameters and apply tweaks
-##########
-
-# Normalize path to preset file
-$preset = ""
-$PSCommandArgs = $args
-If ($args -And $args[0].ToLower() -eq "-preset") {
-	$preset = Resolve-Path $($args | Select-Object -Skip 1)
-	$PSCommandArgs = "-preset `"$preset`""
-}
-
-# Load function names from command line arguments or a preset file
-If ($args) {
-	$tweaks = $args
-	If ($preset) {
-		$tweaks = Get-Content $preset -ErrorAction Stop | ForEach { $_.Trim() } | Where { $_ -ne "" -and $_[0] -ne "#" }
+Function AddOrRemoveTweak($tweak) {
+	If ($tweak[0] -eq "!") {
+		# If the name starts with exclamation mark (!), exclude the tweak from selection
+		$script:tweaks = $script:tweaks | Where-Object { $_ -ne $tweak.Substring(1) }
+	} ElseIf ($tweak -ne "") {
+		# Otherwise add the tweak
+		$script:tweaks += $tweak
 	}
 }
 
+# Parse and resolve paths in passed arguments
+$i = 0
+While ($i -lt $args.Length) {
+	If ($args[$i].ToLower() -eq "-include") {
+		# Resolve full path to the included file
+		$include = Resolve-Path $args[++$i] -ErrorAction Stop
+		$PSCommandArgs += "-include `"$include`""
+		# Import the included file as a module
+		Import-Module -Name $include -ErrorAction Stop
+	} ElseIf ($args[$i].ToLower() -eq "-preset") {
+		# Resolve full path to the preset file
+		$preset = Resolve-Path $args[++$i] -ErrorAction Stop
+		$PSCommandArgs += "-preset `"$preset`""
+		# Load tweak names from the preset file
+		Get-Content $preset -ErrorAction Stop | ForEach-Object { AddOrRemoveTweak($_.Split("#")[0].Trim()) }
+	} ElseIf ($args[$i].ToLower() -eq "-log") {
+		# Resolve full path to the output file
+		$log = $ExecutionContext.SessionState.Path.GetUnresolvedProviderPathFromPSPath($args[++$i])
+		$PSCommandArgs += "-log `"$log`""
+		# Record session to the output file
+		Start-Transcript $log
+	} Else {
+		$PSCommandArgs += $args[$i]
+		# Load tweak names from command line
+		AddOrRemoveTweak($args[$i])
+	}
+	$i++
+}
+
 # Call the desired tweak functions
-$tweaks | ForEach { Invoke-Expression $_ }
+$tweaks | ForEach-Object { Invoke-Expression $_ }
